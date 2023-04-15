@@ -3,7 +3,6 @@
 CCAMix: Context-and-Contour-Aware Superpixel-Based Data Augmentation with Local and Global Context Learning
 ==============================================================================================================
 
-![image](https://github.com/DanielaPlusPlus/CCAMix/blob/main/Fig2a.png)
 ![image](https://github.com/DanielaPlusPlus/CCAMix/blob/main/Fig2b.png)
 
 The source pytorch codes and some trained models are available here.
@@ -16,4 +15,30 @@ we propose CCAMix, an efficient context-and-contour-aware superpixel-based grid 
 
 (ⅲ) Efficient. We propose an augmentation approach with complete randomness for the largest diversification based on superpixel-based grid mixing. To avoid label mismatch problems, we mix labels for augmented samples with superpixel-wise semantic attention. In this way, we only need a single forward propagation and preserve the maximum diversification, which is efficient.
 
+Some trained models:
+-------------------
+[CCAMix + CUB200-2011 + ResNet18](https://github.com/DanielaPlusPlus/CCAMix/blob/main/CIFAR100_imagesize32_R18_OcCaMix.pt)
 
+[CCAMix + CUB200-2011 + ResNeXt50](https://github.com/DanielaPlusPlus/CCAMix/blob/main/CIFAR100_imagesize32_R50_OcCaMix.pt)
+
+[CCAMix + TinyImageNet + ResNet18](https://github.com/DanielaPlusPlus/CCAMix/blob/main/CIFAR100_imagesize32_RX50_OcCaMix.pt)
+
+[CCAMix + TinyImageNet + ResNeXt50](https://github.com/DanielaPlusPlus/CCAMix/blob/main/CUB_R18_OcCaMix.pt)
+
+[OcCaMix + CUB200-2011 + ResNet18](https://github.com/DanielaPlusPlus/OcCaMix/blob/main/CUB_R18_OcCaMix.pt)
+
+[OcCaMix + CUB200-2011 + ResNeXt50](https://github.com/DanielaPlusPlus/OcCaMix/blob/main/CUB_RX50_OcCaMix.pt)
+
+[OcCaMix + TinyImageNet + ResNet18](https://github.com/DanielaPlusPlus/CCAMix/blob/main/CUB_R18_OcCaMix.pt)
+
+[OcCaMix + TinyImageNet + ResNeXt50](https://github.com/DanielaPlusPlus/CCAMix/blob/main/CUB_RX50_OcCaMix.pt)
+
+The top.1 accuracy with OcCaMix for classification:
+--------------------------------------------------
+<table align="left">
+  <tr><th align="center">Method</th><th align="center">Dataset</th><th align="center">ResNet18</th><th align="center">ResNeXt50</th></tr>
+  <tr><th align="center">OcCaMix</th><th align="center">TinyImageNet</th><th align="center">67.35%</th><th align="center">72.23%</th></tr>
+  <tr><th align="center">OcCaMix</th><th align="center">CUB200-2011</th><th align="center">78.40%</th><th align="center">83.69%</th></tr>
+  <tr><th align="center">CCAMix</th><th align="center">TinyImageNet</th><th align="center">68.27%</th><th align="center">73.08%</th></tr>
+  <tr><th align="center">CCAMix</th><th align="center">CUB200-2011</th><th align="center">78.87%</th><th align="center">84.37%</th></tr>
+</table>
