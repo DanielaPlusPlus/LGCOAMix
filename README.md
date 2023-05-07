@@ -17,23 +17,16 @@ we propose CCAMix, an efficient context-and-contour-aware superpixel-based grid 
 
 Some trained models:
 -------------------
-[CCAMix + CUB200-2011 + ResNet18](https://github.com/DanielaPlusPlus/CCAMix/blob/main/CIFAR100_imagesize32_R18_OcCaMix.pt)
-
-[CCAMix + CUB200-2011 + ResNeXt50](https://github.com/DanielaPlusPlus/CCAMix/blob/main/CIFAR100_imagesize32_R50_OcCaMix.pt)
-
-[CCAMix + TinyImageNet + ResNet18](https://github.com/DanielaPlusPlus/CCAMix/blob/main/CIFAR100_imagesize32_RX50_OcCaMix.pt)
-
-[CCAMix + TinyImageNet + ResNeXt50](https://github.com/DanielaPlusPlus/CCAMix/blob/main/CUB_R18_OcCaMix.pt)
+[CCAMix + CUB200-2011 + ResNet18](https://github.com/DanielaPlusPlus/CCAMix/blob/main/CUB_224_R18_CCAMix_best.pt)
 
 [OcCaMix + CUB200-2011 + ResNet18](https://github.com/DanielaPlusPlus/OcCaMix/blob/main/CUB_R18_OcCaMix.pt)
 
 [OcCaMix + CUB200-2011 + ResNeXt50](https://github.com/DanielaPlusPlus/OcCaMix/blob/main/CUB_RX50_OcCaMix.pt)
 
-[OcCaMix + TinyImageNet + ResNet18](https://github.com/DanielaPlusPlus/CCAMix/blob/main/CUB_R18_OcCaMix.pt)
+[OcCaMix + TinyImageNet + ResNet18](https://github.com/DanielaPlusPlus/CCAMix/blob/main/TinyImageNet_R18_OcCaMix_best%20.pt)
 
-[OcCaMix + TinyImageNet + ResNeXt50](https://github.com/DanielaPlusPlus/CCAMix/blob/main/CUB_RX50_OcCaMix.pt)
 
-The top.1 accuracy with OcCaMix for classification:
+The top.1 accuracy for classification:
 --------------------------------------------------
 <table align="left">
   <tr><th align="center">Method</th><th align="center">Dataset</th><th align="center">ResNet18</th><th align="center">ResNeXt50</th></tr>
