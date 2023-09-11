@@ -1,9 +1,9 @@
-# CCAMix
+# LGCOAMix
 
-CCAMix: Context-and-Contour-Aware Superpixel-Based Data Augmentation with Local and Global Context Learning
+LGCOAMix: Local and Global Context-and-Object-part-Aware Superpixel-based Data Augmentation for Deep Visual Recognition
 ==============================================================================================================
 
-![image](https://github.com/DanielaPlusPlus/CCAMix/blob/main/Fig2b.png)
+![image](https://github.com/DanielaPlusPlus/LGCOAMix/blob/main/Fig2b.png)
 
 The source pytorch codes and some trained models are available here.
 
