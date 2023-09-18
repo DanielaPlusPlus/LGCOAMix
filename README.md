@@ -1,6 +1,6 @@
 # LGCOAMix
 
-LGCOAMix: Local and Global Context-and-Object-part-Aware Superpixel-based Data Augmentation for Deep Visual Recognition
+LGCOAMix: Local and Global Context-and-Object-part-Aware Superpixel-based Data Augmentation for Deep Visual Recognition   
 ==============================================================================================================
 
 ![image](https://github.com/DanielaPlusPlus/LGCOAMix/blob/main/framework.png)
