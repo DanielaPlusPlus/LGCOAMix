@@ -7,13 +7,16 @@ LGCOAMix: Local and Global Context-and-Object-part-Aware Superpixel-based Data A
 
 The source pytorch codes and some trained models are available here.
 
-we propose CCAMix, an efficient context-and-contour-aware superpixel-based grid mixing approach with a cut-and-paste strategy for data augmentation in the input space for a strong classifier. By addressing the above shortcomings, we have achieved the following practical benefits.
+we propose LGCOAMix, an efficient local and global context-and-object-part-aware superpixel-based grid mixing data augmentation with cut-and-paste strategy and a training framework for Deep Visual Recognition. The motivation is to improve deep encoder learning through image data augmentation.
 
-(ⅰ) Context-aware. First, we introduce the local context mapping classification to strengthen the representation capability based on selected local discriminative superpixels. Second, we propose superpixel pooling and reweighting to learn contextual information of superpixel features in an image, and selectively focus on more discriminative superpixel-based local regions to generate holistic contextual information. Third, we perform contrastive learning to achieve alignment and consistency of the discriminative local superpixel context across images.
 
-(ⅱ}) Contour-aware. On the one hand, we generate the augmented samples by cutting and pasting superpixel-based local regions, that can preserve the contour information in the input space. On the other hand, we perform superpixel pooling and reweighting based on the superpixel regions, which can preserve the contour information in the feature space.
+(1) We discuss the potential shortcomings of existing cutmix-based data augmentation methods for image classification.
 
-(ⅲ) Efficient. We propose an augmentation approach with complete randomness for the largest diversification based on superpixel-based grid mixing. To avoid label mismatch problems, we mix labels for augmented samples with superpixel-wise semantic attention. In this way, we only need a single forward propagation and preserve the maximum diversification, which is efficient.
+(2) We propose an efficient object part-aware superpixel-based grid mixing method for data augmentation. Unlike existing cutmix-based data augmentation methods, we propose for the first time a superpixel-attention-based semantic label mixing strategy that efficiently requires only a single forward propagation, does not require pre-trained modules, and performs label mixing based on attention without destroying the augmentation diversification.
+
+(3) We propose a novel framework for training a strong classifier that is context and object oriented as well as efficient. To the best of our knowledge, this is the first instance of learning local features from discriminative superpixel regions and cross-image local superpixel contrasts.
+
+(4) We present extensive evaluations of LGCOAMix on several benchmarks and backbone encoders. These evaluations show that LGCOAMix outperforms existing cutmix-based methods for data augmentation.
 
 Some trained models:
 -------------------
