@@ -20,7 +20,7 @@ we propose LGCOAMix, an efficient local and global context-and-object-part-aware
 
 Some trained models:
 -------------------
-[CCAMix + CUB200-2011 + ResNet18](https://github.com/DanielaPlusPlus/CCAMix/blob/main/CUB_224_R18_CCAMix_best.pt)
+[LGCOAMix + CUB200-2011 + ResNet18](https://github.com/DanielaPlusPlus/CCAMix/blob/main/CUB_224_R18_CCAMix_best.pt)
 
 [OcCaMix + CUB200-2011 + ResNet18](https://github.com/DanielaPlusPlus/OcCaMix/blob/main/CUB_R18_OcCaMix.pt)
 
