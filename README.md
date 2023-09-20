@@ -20,13 +20,10 @@ we propose LGCOAMix, an efficient local and global context-and-object-part-aware
 
 Some trained models:
 -------------------
-[LGCOAMix + CUB200-2011 + ResNet18](https://github.com/DanielaPlusPlus/CCAMix/blob/main/CUB_224_R18_CCAMix_best.pt)
+[LGCOAMix + DeiT-B/16 + CUB200-2011 + Acc. 82.20%](Link：https://pan.baidu.com/s/1NZ314mXwKnIyzRJMHSxV3Q Extracted code：fkg3)
 
-[OcCaMix + CUB200-2011 + ResNet18](https://github.com/DanielaPlusPlus/OcCaMix/blob/main/CUB_R18_OcCaMix.pt)
+[LGCOAMix + Stanford Dogs + ResNet50 + Acc. 70.95%](Link：https://pan.baidu.com/s/1vLXVaSefIKtE-RFZG-vceg Extracted code：o5dr)
 
-[OcCaMix + CUB200-2011 + ResNeXt50](https://github.com/DanielaPlusPlus/OcCaMix/blob/main/CUB_RX50_OcCaMix.pt)
-
-[OcCaMix + TinyImageNet + ResNet18](https://github.com/DanielaPlusPlus/CCAMix/blob/main/TinyImageNet_R18_OcCaMix_best%20.pt)
 
 
 The top.1 accuracy for classification:
