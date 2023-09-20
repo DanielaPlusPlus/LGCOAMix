@@ -20,9 +20,11 @@ we propose LGCOAMix, an efficient local and global context-and-object-part-aware
 
 Some trained models:
 -------------------
-[LGCOAMix + DeiT-B/16 + CUB200-2011 + Acc. 82.20%](Link：https://pan.baidu.com/s/1NZ314mXwKnIyzRJMHSxV3Q Extracted code：fkg3)
+LGCOAMix + DeiT-B/16 + CUB200-2011 + Acc. 82.20%(Link：https://pan.baidu.com/s/1NZ314mXwKnIyzRJMHSxV3Q Extracted code：fkg3)
 
-[LGCOAMix + Stanford Dogs + ResNet50 + Acc. 70.95%](Link：https://pan.baidu.com/s/1vLXVaSefIKtE-RFZG-vceg Extracted code：o5dr)
+LGCOAMix + ResNet50 + Stanford Dogs + Acc. 70.95%(Link：https://pan.baidu.com/s/1vLXVaSefIKtE-RFZG-vceg Extracted code：o5dr)
+
+LGCOAMix + ResNet50 + CIFAR100 + Acc. 83.92%(Link：https://pan.baidu.com/s/1B5cxhvBcJgiH93Lr5oroRw Extracted code：qaz1)
 
 
 
