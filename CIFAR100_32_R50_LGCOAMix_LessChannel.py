@@ -1,7 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""3个losses, 利用local response的大小对local regions进行选择后然后求loss_local_CE和loss_local_SCL"""
-# from dataset_RSB import Sample_label_load
+
 import copy
 
 import torch
@@ -366,57 +363,4 @@ for epoch in range(args.START_EPOCH, args.NB_EPOCH):
         del images;
         del labels;
 
-    for batch in tqdm(testloader):
-        images, labels = batch
-        images = images.float().cuda()
-        labels = labels.long().cuda()
 
-        net.eval()
-        with torch.no_grad():
-            preds = net(images)
-
-        loss = criterion_ce(preds, labels).mean()
-        test_loss += loss.item()
-        total_correct_ts += get_num_correct(preds, labels)
-        del images;
-        del labels
-
-    acc_tr = total_correct_tr / len_train
-    loss_tr = train_loss / len_train
-    loss_ts = test_loss / len_test
-    acc_ts = total_correct_ts / len_test
-
-    if len(train_loss_local_CE) > 0:
-        train_loss_local_CE_avg = torch.stack(train_loss_local_CE).mean().data
-    else:
-        train_loss_local_CE_avg = 0
-
-    if len(train_loss_local_SCL) > 0:
-        train_loss_local_SCL_avg = torch.stack(train_loss_local_SCL).mean().data
-    else:
-        train_loss_local_SCL_avg = 0
-
-    if len(train_loss_global) > 0:
-        train_loss_global_avg = torch.stack(train_loss_global).mean().data
-    else:
-        train_loss_global_avg = 0
-
-    print('Ep: ', epoch, 'AC_tr: ', acc_tr, 'Loss_tr: ', loss_tr, 'AC_ts: ', acc_ts, 'Loss_ts: ', loss_ts)
-
-    Acc_best2 = total_correct_ts / len_test
-
-    with open(results_file_name, 'a') as file:
-        file.write(
-            'Epoch %d, train_acc = %.5f , train_loss = %.5f , train_loss_local_CE = %.5f, train_loss_local_SCL = %.5f,train_loss_global = %.5f, test_acc = %.5f , test_loss = %.5f \n' % (
-                epoch, acc_tr, loss_tr, train_loss_local_CE_avg, train_loss_local_SCL_avg, train_loss_global_avg, acc_ts, loss_ts))
-
-    if Acc_best2 >= Acc_best:
-        Acc_best = Acc_best2
-        Epoch_best = epoch
-        if len(args.gpu_ids) > 1:
-            torch.save(net.module.state_dict(), name)
-        else:
-            torch.save(net.state_dict(), name)
-        print('Best_Ep:', epoch, 'Best_Val_Acc:', Acc_best)
-
-print('Best_Ep:', Epoch_best, 'Best_Val_Acc:', Acc_best)
