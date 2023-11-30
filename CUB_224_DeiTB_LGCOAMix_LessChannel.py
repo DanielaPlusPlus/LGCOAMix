@@ -491,41 +491,4 @@ for epoch in range(args.START_EPOCH, args.NB_EPOCH):
         del images;
         del labels;
 
-    for batch in tqdm(test_loader):
-        images, labels, _ = batch
-        images = images.float().cuda()
-        labels = labels.long().cuda()
 
-        net.eval()
-        with torch.no_grad():
-            preds = net(images)
-
-        loss = criterion_ce(preds, labels).mean()
-        test_loss += loss.item()
-        total_correct_ts += get_num_correct(preds, labels)
-        del images;
-        del labels
-
-    acc_tr = total_correct_tr / len(train_set)
-    loss_tr = train_loss / len(train_set)
-    loss_ts = test_loss / len(test_set)
-    acc_ts = total_correct_ts / len(test_set)
-
-    print('Ep: ', epoch, 'AC_tr: ', acc_tr, 'Loss_tr: ', loss_tr, 'AC_test: ', acc_ts, 'Loss_test: ', loss_ts)
-
-    Acc_best2 = acc_ts
-
-    with open(results_file_name, 'a') as file:
-        file.write(
-            'Epoch %d, train_acc = %.5f , train_loss = %.5f , test_acc = %.5f, test_loss = %.5f\n' % (
-                epoch, acc_tr, loss_tr, acc_ts, loss_ts))
-
-    if Acc_best2 >= Acc_best:
-        Acc_best = Acc_best2
-        epoch_best = epoch
-        if len(args.gpu_ids) > 1:
-            torch.save(net.module.state_dict(), net_name)
-        else:
-            torch.save(net.state_dict(), net_name)
-        print('Best_Ep:', epoch, 'Best_test_Acc:', Acc_best)
-print(' * Best_Ep:', epoch_best, ' * Best_test_Acc:', Acc_best)
